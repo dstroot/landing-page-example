@@ -87,9 +87,9 @@
                     <div class="col-md-4 col-md-pull-8">
                         <div class='center-block'>
                             <ul class='fa-ul hidden-xs'>
-                                <li><i class="fa fa-li fa-magic"></i>Flat design</li>
-                                <li><i class="fa fa-li fa-magic"></i>Responsive</li>
-                                <li><i class="fa fa-li fa-magic"></i>Bootstrap 3</li>
+                                <li><i class="fa fa-li fa-cog"></i>Flat design</li>
+                                <li><i class="fa fa-li fa-heart"></i>Responsive</li>
+                                <li><i class="fa fa-li fa-cloud"></i>Bootstrap 3</li>
                                 <li><i class="fa fa-li fa-magic"></i>Built with LESS</li>
                             </ul>
                             <p>
@@ -148,19 +148,19 @@
             </div>
             <div class='row'>
                 <div class='col-md-4'>
-                    <h3><i class="fa fa-magic"></i> Make it your own</h3>
+                    <h3><i class='fa fa-thumbs-o-up fa-lg'></i> Make it your own</h3>
                     <p>
                         Easily change every color, by changing just few variables. Add or remove pages, and choose from 600+ fonts.
                     </p>
                 </div>
                 <div class='col-md-4'>
-                    <h3><i class="fa fa-magic"></i> Page speed</h3>
+                    <h3><i class="fa fa-magic fa-lg"></i> Page speed</h3>
                     <p>
                         The theme is optimized to ensure fast loading time by lazy-loading of images and beeing minimal by design.
                     </p>
                 </div>
                 <div class='col-md-4'>
-                    <h3><i class="fa fa-magic"></i>For every device</h3>
+                    <h3><i class="fa fa-tablet fa-lg"></i>For every device</h3>
                     <p>
                         The Story is built to look great on every device. Custom menu for mobile devices, to ensure the best expierence.
                     </p>
@@ -285,26 +285,27 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript"></script>
 
-        <!-- To collapse the Nav on the mobile view -->
+        <!-- To collapse the Nav on the mobile view after a click -->
         <script type="text/javascript">
           $('.navbar-collapse a').click(function (e) {
             $('.navbar-collapse').collapse('toggle');
           });
         </script>
 
-          <script>
-            $(document).ready(function() {
-              // Async Load
-              $.getScript("js/toTop.min.js")
-              .done(function(script, textStatus) {
-                console.log("ToTop loaded.");
-                $().toTop();
-              })
-              .fail(function(jqxhr, settings, exception) {
-                console.log("ToTop load failed.");
-              });
+        <!-- toTop function -->
+        <script>
+          $(document).ready(function() {
+            // Async Load
+            $.getScript("js/toTop.min.js")
+            .done(function(script, textStatus) {
+              console.log("ToTop loaded.");
+              $().toTop();
+            })
+            .fail(function(jqxhr, settings, exception) {
+              console.log("ToTop load failed.");
             });
-          </script>
+          });
+        </script>
 
     </body>
 </html>
