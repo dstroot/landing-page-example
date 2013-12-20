@@ -1,0 +1,380 @@
+// Bring in bootstrap
+// --------------------------------------------------
+@import "bootstrap/bootstrap.less";
+
+// Now add bootstrap overrides
+// --------------------------------------------------
+
+// Change the base font to Open Sans
+@font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
+
+// Brand colors
+// -------------------------
+@brand-primary:         #4baad3;  //
+@brand-success:         #5cb85c;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+@brand-info:            #5bc0de;
+@white:                 #fff;     //
+
+// Basics
+// --------------------------------------------------------
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+body {
+  padding-top: 50px;
+  //-webkit-font-smoothing: antialiased;
+  font-weight: 300;
+}
+
+// Navbar
+// --------------------------------------------------------
+@navbar-inverse-brand-color:       darken(@brand-primary, 15%);
+@navbar-inverse-brand-hover-color: @white;
+@navbar-inverse-link-active-bg:    @brand-primary;
+//@navbar-inverse-bg:                rgba(0,0,0,0.8);
+.navbar {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// remove the border
+.navbar-fixed-top {
+  border-width: 0 0 0px;
+}
+
+// Tweak the brand
+.navbar-brand {
+  font-size: 18px;
+  margin-top: -1px;
+  letter-spacing: 1px;
+  // Prevent Font Awesome Incoms from increasing height of navbar
+  //> .fa {
+    //float: left;
+    //margin-top: -2px;
+    //margin-right: 5px;
+  //}
+}
+
+
+
+/*
+ * Main navigation
+ *
+ * Turn the `.navbar` at the top of the docs purple.
+ */
+
+// .bs-docs-nav {
+//   text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+//   background-color: #563d7c;
+//   border-color: #463265;
+//   box-shadow: 0 1px 0 rgba(255,255,255,.1);
+// }
+// .bs-docs-nav .navbar-collapse {
+//   border-color: #463265;
+// }
+// .bs-docs-nav .navbar-brand {
+//   color: #fff;
+// }
+// .bs-docs-nav .navbar-nav > li > a {
+//   color: #cdbfe3;
+// }
+// .bs-docs-nav .navbar-nav > li > a:hover {
+//   color: #fff;
+// }
+// .bs-docs-nav .navbar-nav > .active > a,
+// .bs-docs-nav .navbar-nav > .active > a:hover {
+//   color: #fff;
+//   background-color: #463265;
+// }
+// .bs-docs-nav .navbar-toggle {
+//   border-color: #563d7c;
+// }
+// .bs-docs-nav .navbar-toggle:hover {
+//   background-color: #463265;
+//   border-color: #463265;
+// }
+
+
+
+
+// Jumbotron
+// --------------------------------------------------------
+@jumbotron-bg:                   @brand-primary;
+@jumbotron-heading-color:        #fff;
+.jumbotron {
+  margin-bottom: 0px;
+  h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: @white;
+    font-size: 50px;
+  }
+  p {
+    color: @white;
+  }
+  ul {
+    font-size: 25px;
+    font-weight: 300;
+    color: @white;
+    //list-style-type: none;
+  }
+  li {
+    line-height: 35px;
+    height: 50px;
+    margin: 10px;
+  }
+}
+
+// Hero
+// --------------------------------------------------------
+.hero {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/bg-img.jpg") top center;
+  height: 700px;
+  .feature {
+    display: block;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+  }
+  .content {
+    display: block;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 500px;
+    text-align: center;
+    overflow: hidden;
+    text-align: center;
+
+    h2 {
+      margin: 0 0 24px;
+      padding: 0;
+      font-size: 80px;
+      color: @brand-primary; //#fff;
+      font-family: "Lato", sans-serif;
+      letter-spacing: -2px;
+      //text-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);
+      //text-transform: capitalize;
+    }
+
+      p {
+      font-size: 20px;
+      color: @gray;
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+
+// Marketing
+// --------------------------------------------------------
+.marketing {
+  margin-bottom: 70px;
+  h1 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 34px;
+    font-family: "Lato", sans-serif;
+  }
+  i {
+    color: @brand-primary;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+
+// Make Buttons Square
+// --------------------------------------------------------
+.btn {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  border: 0px;
+}
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 darken(@brand-primary, 20%);  //@brand-primary;
+@btn-primary-border:             @brand-primary; // darken(@btn-primary-bg, 5%);
+
+
+// Featurettes
+// --------------------------------------------------------
+.featurette {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  h1 {
+    margin-top: 50px;
+    font-size: 50px;
+    letter-spacing: -2px;
+  }
+}
+
+// footer style
+// --------------------------------------------------------
+.footer {
+  //clear: both;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: @gray-dark;
+  h4 {
+    color: darken(@brand-primary, 15%);
+    margin-left: 5px;
+    font-size: 24px;
+    width: 185px;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 14px;
+    color: darken(@gray-light, 15%);
+    //text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    a {
+      text-decoration: none;
+      color: @gray-light;
+      // border-bottom: 1px dotted @gray-light;
+      &:hover {
+        color: @gray-lighter;
+      }
+    }
+  }
+  li {
+    list-style: none;
+    //margin-left: 20px;
+    font-size: 18px;
+    text-align: left;
+    color: @gray-light;
+    a {
+      text-decoration: none;
+      color: @gray-light;
+      &:hover {
+        color: @gray-lighter;
+      }
+    }
+  }
+}
+
+
+// Animation
+// --------------------------------------------------------
+// https://daneden.me/animate/build/
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  } 100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@-o-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+  100% {
+    -o-transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+
+// Media/Responsiveness
+// --------------------------------------------------------
+@media (max-width: 480px) {
+  .hero {
+    height: 250px;
+    .content {
+      width: 175px;
+      h2 {
+        font-size: 30px;
+        margin: 0 0 14px;
+      }
+      p {
+      font-size: 12px;
+      }
+    }
+  }
+  .jumbotron {
+    h1 {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 25px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .featurette {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;
+      letter-spacing: -1px;
+    }
+  }
+  hr {
+    margin: 0px;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1170px) {
+}
