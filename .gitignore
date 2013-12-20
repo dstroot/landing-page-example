@@ -1,13 +1,3 @@
-# Configuration Files
-#######################
-#_jekyll_s3.yml
-#_config.yml
-
-# Ignore compiled docs
-#######################
-_gh_pages
-_site
-
 # Numerous always-ignore extensions
 #######################
 *.diff
@@ -23,6 +13,11 @@ _site
 *.sass-cache
 *.ruby-version
 
+# Node
+#######################
+npm-debug.log
+node_modules
+
 # OS or Editor folders
 #######################
 .DS_Store
@@ -37,16 +32,6 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 
-# grunt-html-validation
-#######################
-validation-status.json
-validation-report.json
-
 # Folders to ignore
 #######################
-.hg
-.svn
-.CVS
-.idea
-node_modules
-bootstrap
+less/bootstrap
