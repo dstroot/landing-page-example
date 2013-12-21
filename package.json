@@ -1,12 +1,36 @@
 {
-  "name": "application-name",
+  "name": "landing-page-example",
+  "description": "Example Landing Page",
+  "homepage": "http://dstroot.github.io/landing-page-example",
+  "author": "Dan Stroot",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dstroot/landing-page-example.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/dstroot/landing-page-example/gh-pages/LICENSE.txt"
+    }
+  ],
   "dependencies": {
     "express": "3.4.x",
     "less-middleware": "0.1.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-contrib-jshint": "~0.7.0",      
+    "grunt-contrib-less": "~0.8.0",       
+    "grunt-contrib-uglify": "~0.2.4",     
+    "grunt-contrib-watch": "~0.5.3",      
+    "grunt-html-validation": "~0.1.11",   
+    "load-grunt-tasks": "~0.2.0"
   }
 }

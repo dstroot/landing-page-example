@@ -103,7 +103,7 @@
                 $(containerIdHash).fadeIn(settings.fadeInDelay);
             } else {
                 $(containerIdHash).fadeOut(settings.fadeOutDelay);
-            };
+            }
 
             // Scroll to top on click
             $(containerIdHash).click(function() {

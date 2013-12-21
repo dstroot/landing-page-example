@@ -35,3 +35,12 @@ nbproject
 # Folders to ignore
 #######################
 less/bootstrap
+
+# HTML Validation Files
+#######################
+validation*.json
+
+# Generated Files
+#######################
+css/
+js/*.min.js
