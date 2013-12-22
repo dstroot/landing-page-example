@@ -40,6 +40,7 @@ module.exports = function(grunt) {
     },
 
     // JS Minification
+    // https://github.com/gruntjs/grunt-contrib-uglify
     uglify: {
       options: {
         mangle: true,
@@ -78,6 +79,8 @@ module.exports = function(grunt) {
     },
 
     // CSS Lint Configuration
+    // https://github.com/gruntjs/grunt-contrib-csslint
+    // https://github.com/stubbornella/csslint/wiki/Rules
     csslint: {
       options: {
         csslintrc: '.csslintrc'
@@ -85,26 +88,37 @@ module.exports = function(grunt) {
       src: ['css/style.css']
     },
 
+    // Connect Static Server Configuration
+    // https://github.com/gruntjs/grunt-contrib-connect
+    connect: {
+      server: {
+        options: {
+          port: 3000,
+          base: '.'
+        }
+      }
+    },
+
     //Watch and LiveReload configuration
     watch: {
       js: {
         files: ['js/*.js'],
         //tasks: ['concat:js', 'uglify:js'],
-        //tasks: ['uglify:js'],
+        tasks: ['uglify'],
         options: {
           livereload: true,
         }
       },
       css: {
         files: ['less/*.less', 'less/bootstrap/*.less'],
-        //tasks: ['less:style'],
+        tasks: ['less'],
         options: {
           livereload: true,
         }
       },
       html: {
         files: ['*.html'],
-        //tasks: ['validation'],
+        tasks: ['validation'],
         options: {
           livereload: true,
         }
@@ -114,21 +128,20 @@ module.exports = function(grunt) {
   });
 
 
- /*  This section is where we require the necessary
-  *  plugins.  We can list each like so:
+
+ /*  
+  *  This section is where we require the necessary plugins.
   *
-  *  grunt.loadNpmTasks('grunt-contrib-concat');
-  *
-  *  Or, we can be more elegant and just tell Grunt
+  *  Let's be elegant and just tell Grunt
   *  to read our package.json devDependencies:
   */
+
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
 
 
  /*  
   *  This section is where we setup the Grunt tasks
-  *
   */
 
   // HTML validation task
@@ -144,6 +157,6 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-css', ['csslint']);
 
   // Default Task (drives LiveReload)
-  grunt.registerTask('default', [ 'clean', 'less', 'validation', 'process-js', 'watch' ]);
+  grunt.registerTask('default', [ 'clean', 'less', 'validation', 'process-js', 'connect', 'watch' ]);
 
 };

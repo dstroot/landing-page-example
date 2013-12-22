@@ -11,8 +11,10 @@
   "outline-none": false,
   "qualified-headings": false,
   "regex-selectors": false,
+  "zero-units": false,
   "text-indent": false,
   "unique-headings": false,
   "universal-selector": false,
-  "unqualified-attributes": false
+  "unqualified-attributes": false,
+  "vendor-prefix": false
 }

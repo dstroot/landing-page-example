@@ -1,6 +1,5 @@
-<div id="fauxFoot" class="footer">
-    <div class="footerColWrap cf">
-        <span class="texasNote">Made with love in Texas.</span>
+<div class="footer">
+    <div class="footerColWrap">
         <div class="footerCol">
             <h5>
                 <a href="/about/">Company</a>
