@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
- 
+
     pkg: grunt.file.readJSON('package.json'),
 
     // Clean-up Task configuration.
@@ -128,8 +128,7 @@ module.exports = function(grunt) {
   });
 
 
-
- /*  
+ /*
   *  This section is where we require the necessary plugins.
   *
   *  Let's be elegant and just tell Grunt
@@ -139,8 +138,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
 
-
- /*  
+ /*
   *  This section is where we setup the Grunt tasks
   */
 
