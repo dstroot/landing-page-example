@@ -3222,7 +3222,8 @@ body {
 .jumbotron h1 {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
+  font-weight: 300;
 }
 .jumbotron h2 {
   text-align: center;
@@ -3230,6 +3231,7 @@ body {
   margin-bottom: 30px;
   color: #ffffff;
   font-size: 50px;
+  font-weight: 300;
 }
 .jumbotron p {
   color: #ffffff;
@@ -3292,6 +3294,7 @@ body {
   margin-bottom: 40px;
   text-align: center;
   font-size: 50px;
+  font-weight: 300;
 }
 .marketing h3 {
   font-size: 34px;
@@ -3317,6 +3320,7 @@ body {
   margin-top: 30px;
   font-size: 50px;
   letter-spacing: -2px;
+  font-weight: 300;
 }
 .footer {
   text-align: center;
