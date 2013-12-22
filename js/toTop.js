@@ -89,7 +89,7 @@
         }, options );
 
         var containerIdHash = '#' + settings.containerId;
- 
+
         // First let's add the DOM element
         $('body').append('<a id="'+settings.containerId+'"><i class="fa '+settings.fontAwesomeIcon+' fa-4x"></i></a>');
 
@@ -106,12 +106,12 @@
             }
 
             // Scroll to top on click
-            $(containerIdHash).click(function() {
+            $(containerIdHash).click(function (e) {
+                e.preventDefault();
                 $('html, body').stop().animate({ scrollTop: 0 }, settings.scrollSpeed, settings.easingType);
             });
 
         });
-
     };
 
 }( jQuery ));

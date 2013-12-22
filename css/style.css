@@ -3234,6 +3234,10 @@ body {
 .jumbotron p {
   color: #ffffff;
 }
+.jumbotron .btn-lg {
+  margin-top: 10px;
+  width: 150px;
+}
 .jumbotron ul {
   font-size: 25px;
   font-weight: 300;
@@ -3416,7 +3420,7 @@ body {
 }
 @media (max-width: 480px) {
   .hero {
-    height: 250px;
+    height: 230px;
   }
   .hero .content {
     width: 175px;
@@ -3426,17 +3430,21 @@ body {
     margin: 0 0 14px;
   }
   .hero .content p {
-    font-size: 12px;
+    font-size: 13px;
   }
   .jumbotron h1 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 26px;
   }
   .jumbotron h2 {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+  .jumbotron p {
+    font-size: 14px;
   }
   .featurette {
     margin-top: 20px;
@@ -3444,7 +3452,7 @@ body {
   }
   .featurette h1 {
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: -1px;
   }
   hr {
