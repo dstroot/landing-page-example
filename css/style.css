@@ -3306,6 +3306,11 @@ body {
   color: #555555;
   margin-bottom: 20px;
 }
+.anchor {
+  display: block;
+  height: 50px;
+  margin-top: -50px;
+}
 .marketing {
   margin-bottom: 70px;
 }
