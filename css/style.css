@@ -3216,6 +3216,11 @@ body {
   margin-top: -1px;
   letter-spacing: 1px;
 }
+.navbar-brand > .fa {
+  float: left;
+  margin-top: 1px;
+  margin-right: 5px;
+}
 .jumbotron {
   margin-bottom: 0px;
 }
@@ -3238,7 +3243,9 @@ body {
 }
 .jumbotron .btn-lg {
   margin-top: 10px;
-  width: 150px;
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
 }
 .jumbotron ul {
   font-size: 25px;
@@ -3250,11 +3257,24 @@ body {
   height: 50px;
   margin: 10px;
 }
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #cdbfe3;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #563d7c;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
 .hero {
-  padding: 0;
   overflow: hidden;
   position: relative;
   background: url("../img/bg-img.jpg") top center;
+  background-size: cover;
   height: 700px;
 }
 .hero .feature {

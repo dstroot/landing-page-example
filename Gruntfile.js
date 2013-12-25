@@ -43,7 +43,7 @@ module.exports = function(grunt) {
     // https://github.com/gruntjs/grunt-contrib-uglify
     uglify: {
       options: {
-        mangle: true,
+        mangle: false,
         report: 'min'
       },
       js: {
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
     //Watch and LiveReload configuration
     watch: {
       js: {
-        files: ['js/*.js'],
+        files: ['js/toTop.js'],
         //tasks: ['concat:js', 'uglify:js'],
         tasks: ['uglify'],
         options: {
