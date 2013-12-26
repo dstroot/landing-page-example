@@ -175,9 +175,9 @@
         <!-- Jumbotron Quote
         ======================================== -->
         <div class="jumbotron">
-            <div class="container">
+            <!-- <div class="container"> -->
                 <h2><i class="fa fa-quote-left"></i> Mobile first, truly responsive, based on bootstrap 3 <i class="fa fa-quote-right"></i></h2>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Featurettes
@@ -293,8 +293,8 @@
 
         <!-- To collapse the Nav on the mobile view after a click -->
         <script type="text/javascript">
-          $('.navbar-collapse a').click(function (e) {
-            $('.navbar-collapse').collapse('toggle');
+          $('.navbar-collapse a').click(function () {
+            if ($( 'nav' ).hasClass( 'in' )) $('.navbar-collapse').collapse('toggle');
           });
         </script>
 
