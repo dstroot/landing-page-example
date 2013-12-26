@@ -35,6 +35,10 @@ body {
   //-webkit-font-smoothing: antialiased;
   font-weight: 300;  // lightweight thin font
 }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 300;
+}
 
 // Navbar
 // --------------------------------------------------------
@@ -263,7 +267,7 @@ body {
   li {
     list-style: none;
     //margin-left: 20px;
-    font-size: 18px;
+    font-size: 22px;
     text-align: left;
     color: @gray-light;
     a {
@@ -272,6 +276,9 @@ body {
       &:hover {
         color: @gray-lighter;
       }
+    }
+    i {
+    color: @brand-primary;
     }
   }
 }
@@ -337,6 +344,7 @@ body {
       }
       p {
       font-size: 13px;
+      font-weight: 500;
       }
     }
   }
@@ -367,6 +375,23 @@ body {
   }
   hr {
     margin: 0px;
+  }
+}
+@media (max-width: 992px) {
+  .featurette {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    h1 {
+      margin-top: 20px;
+      font-size: 32px;
+      letter-spacing: -1px;
+    }
+  }
+  .lead {
+    font-size: 16px;
+  }
+  hr {
+    margin: 15px;
   }
 }
 @media (min-width: 768px) {
