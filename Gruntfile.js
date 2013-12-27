@@ -57,14 +57,15 @@ module.exports = function(grunt) {
     less: {
       compileCore: {
         options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: 'css/style.css.map',
-          sourceMapFilename: 'css/style.css.map'
+          strictMath: true
+          //sourceMap: true,
+          //outputSourceFiles: true,
+          //sourceMapURL: 'css/style.css.map',
+          //sourceMapFilename: 'css/style.css.map'
         },
         files: {
-          'css/style.css': 'less/style.less'
+          'css/style.css': 'less/style.less',
+          'css/cover.css': 'less/cover.less'
         }
       },
       minify: {
@@ -73,7 +74,8 @@ module.exports = function(grunt) {
           report: 'min'
         },
         files: {
-          'css/style.min.css': 'css/style.css'
+          'css/style.min.css': 'css/style.css',
+          'css/cover.min.css': 'css/cover.css'
         }
       }
     },
