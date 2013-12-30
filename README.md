@@ -8,7 +8,7 @@
 
 ### Background
 
-I wanted to create a reasonably nice landing page as a learning process.  Feel free to use and abuse as you see fit. 
+I wanted to create a reasonably nice landing page as a learning process.  Feel free to use and abuse as you see fit.
 
 The key files are only:
 
@@ -17,8 +17,8 @@ The key files are only:
 
 ### Technical Dependencies
 
-* [Nodejs](http://nodejs.org/) 
-* [Gruntjs](http://gruntjs.com/) 
+* [Nodejs](http://nodejs.org/)
+* [Gruntjs](http://gruntjs.com/)
 
 ### Steps to build and run locally
 
@@ -49,5 +49,29 @@ The key files are only:
 #### Build Tooling
 
 * [Sublime Text](http://www.sublimetext.com/)
-* [Nodejs](http://nodejs.org/) 
-* [Gruntjs](http://gruntjs.com/) 
+* [Nodejs](http://nodejs.org/)
+* [Gruntjs](http://gruntjs.com/)
+
+#### Design and Utilities
+
+* [picturefill](https://github.com/scottjehl/picturefill) Responsive Images
+* [scrollto](https://github.com/flesler/jquery.scrollTo) Scroll to parts on the page
+* [leaflet](https://github.com/Leaflet/Leaflet) Open Street Map maps
+* [Swipe](https://github.com/bradbirdsall/Swipe) Swipable carousel
+
+#### Parallax
+
+* [Stellar.js](https://github.com/markdalgleish/stellar.js) Simple parallax library
+
+
+
+
+
+
+
+
+
+
+
+
+
