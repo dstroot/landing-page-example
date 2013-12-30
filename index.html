@@ -40,6 +40,21 @@
 
         <!-- Navigation
         ======================================== -->
+
+
+        <div id="searchDropdown" class="search-drop hidden">
+          <form action="/Guide/Search" method="get" class="ignoreCSRF">
+            <div class="header-container">
+              <span class="search-title">Search iFixit:</span>
+              <input type="text" name="query" id="searchForm" class="search-field" placeholder="Enter keywords" spellcheck="false">
+              <button class="search-submit" id="searchSubmit" type="submit"><i class="fa fa-search"></i></button>
+              <i class="search-close search-toggle fa fa-times"></i>
+            </div>
+          </form>
+          <!-- <button type="button" class="close" aria-hidden="true">&times;</button> -->
+        </div>
+
+
         <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
             <div class="container">
                 <div class="navbar-header">
