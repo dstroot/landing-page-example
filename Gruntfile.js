@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     // Clean-up Task configuration.
     clean: {
-      dist: ['css/*', 'js/*.min.js']
+      dist: [ 'css/*' ]
     },
 
     // HTML Validation Task Configuration
@@ -22,36 +22,33 @@ module.exports = function(grunt) {
         ]
       },
       files: {
-        src: ['*.html']
+        src: [ '*.html' ]
       }
     },
 
     // JS Validation Task Configuration
     jshint: {
       options: {
-        jshintrc: 'js/.jshintrc'
+        jshintrc: '.jshintrc'
       },
       gruntfile: {
         src: 'Gruntfile.js'
-      },
-      js: {
-        src: ['js/toTop.js']
       }
     },
 
     // JS Minification
     // https://github.com/gruntjs/grunt-contrib-uglify
-    uglify: {
-      options: {
-        mangle: false,
-        report: 'min'
-      },
-      js: {
-        files: {
-          'js/toTop.min.js': ['js/toTop.js']
-        }
-      }
-    },
+    // uglify: {
+    //   options: {
+    //     mangle: false,
+    //     report: 'min'
+    //   },
+    //   js: {
+    //     files: {
+    //       'js/totop.min.js': ['js/totop.js']
+    //     }
+    //   }
+    // },
 
     // LESS Configuration
     less: {
@@ -103,14 +100,14 @@ module.exports = function(grunt) {
 
     //Watch and LiveReload configuration
     watch: {
-      js: {
-        files: ['js/toTop.js'],
-        //tasks: ['concat:js', 'uglify:js'],
-        tasks: ['uglify'],
-        options: {
-          livereload: true,
-        }
-      },
+      // js: {
+      //   files: ['js/toTop.js'],
+      //   //tasks: ['concat:js', 'uglify:js'],
+      //   tasks: ['uglify'],
+      //   options: {
+      //     livereload: true,
+      //   }
+      // },
       css: {
         files: ['less/*.less', 'less/bootstrap/*.less'],
         tasks: ['less'],
@@ -136,7 +133,6 @@ module.exports = function(grunt) {
   *  Let's be elegant and just tell Grunt
   *  to read our package.json devDependencies:
   */
-
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
 
@@ -151,12 +147,12 @@ module.exports = function(grunt) {
   grunt.registerTask('compile-less', ['less']);
 
   // Process Javascript
-  grunt.registerTask('process-js', ['jshint', 'uglify']);
+  grunt.registerTask('process-js', ['jshint']);
 
   // Lint CSS
   grunt.registerTask('validate-css', ['csslint']);
 
   // Default Task (drives LiveReload)
-  grunt.registerTask('default', [ 'clean', 'less', 'validation', 'process-js', 'connect', 'watch' ]);
+  grunt.registerTask('default', [ 'clean', 'less', 'validation', 'connect', 'watch' ]);
 
 };

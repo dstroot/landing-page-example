@@ -1,6 +1,6 @@
 // Bring in bootstrap
 // --------------------------------------------------
-@import "bootstrap/bootstrap.less";
+@import "./js/vendor/bootstrap/less/bootstrap.less";
 
 // Now add bootstrap overrides
 // --------------------------------------------------
@@ -296,10 +296,37 @@ overflow:auto
 
 // Navbar
 // --------------------------------------------------------
+
+// Main Background
+// @navbar-inverse-bg:                         @brand-primary;  //
+// @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+
+// Inverted navbar links
+// @navbar-inverse-link-color:                 @white;//@gray-dark; //
+
+// Hover
+// @navbar-inverse-link-hover-color:           #fff;
+// @navbar-inverse-link-hover-bg:              transparent;
+
+// Active
+// @navbar-inverse-link-active-color:          @white;//@navbar-inverse-link-hover-color;
+// @navbar-inverse-link-active-bg:             @brand-primary; //@white; //darken(@navbar-inverse-bg, 20%); // was 10
+
+// Brand
+// @navbar-inverse-brand-color:                @navbar-inverse-link-color;
+// @navbar-inverse-brand-hover-color:          #fff;
+// @navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle
+// @navbar-inverse-toggle-hover-bg:            darken(@brand-primary, 15%);
+// @navbar-inverse-toggle-icon-bar-bg:         #fff;
+// @navbar-inverse-toggle-border-color:        @white; //darken(@brand-primary, 15%);
+
+
 @navbar-inverse-brand-color:       darken(@brand-primary, 15%);
 @navbar-inverse-brand-hover-color: @white;
 @navbar-inverse-link-active-bg:    @brand-primary;
-//@navbar-inverse-bg:                rgba(0,0,0,0.8);
+// @navbar-inverse-bg:                rgba(0,0,0,0.8);
 .navbar {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -308,14 +335,15 @@ overflow:auto
 
 // remove the border
 .navbar-fixed-top {
-  border-width: 0 0 0px;
+  border-width: 0px;
 }
 
 // Tweak the brand
 .navbar-brand {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: -1px;
   letter-spacing: 1px;
+  font-weight: bolder;
   // Prevent Font Awesome icon from increasing height of navbar
   > .fa {
     float: left;
@@ -391,14 +419,29 @@ overflow:auto
   background: url("../img/bg-img.jpg") top center;
   background-size: cover;
   height: 700px;
-  .feature {
+  .hero-inner {
+    position: relative;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: @screen-sm-min) {
+      width: @container-sm;
+    }
+    @media (min-width: @screen-md-min) {
+      width: @container-md;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: @container-lg;
+    }
+  }
+  .hero-image {
     display: block;
     height: 90%;
     position: absolute;
     bottom: 0;
     left: 5%;
   }
-  .content {
+  .hero-content {
     display: block;
     position: absolute;
     top: 15%;
@@ -453,7 +496,7 @@ overflow:auto
     //font-family: "Lato", sans-serif;
   }
   i {
-    color: @brand-primary;
+    color: #16a085; //@brand-primary;
   }
   p {
     font-size: 18px;
