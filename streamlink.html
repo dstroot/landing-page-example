@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>FinGraph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
+    <script src="https://app.divshot.com/js/jquery.min.js"></script>
+    <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+  -->
+    <script type="text/javascript" src="http://platform.caplin.com/sljs/streamlink.js"></script>
+
+    <script>
+
+    // Get the streamLink.
+    var streamLink = caplin.streamlink.StreamLinkFactory.create({
+                  username: "pat",
+                  password: "cappass",
+      liberator_urls: "rttp://platform.caplin.com"
+    });
+
+    // Define the subscription listener.
+    var subscriptionListener = {
+
+      onSubscriptionStatus : function(subscription, event) {
+        log(subscription.getSubject() + " is now " + event.getStatus());
+      },
+
+      onSubscriptionError : function(subscription, event) {
+        log("Error: Subject " + subscription.getSubject() + " is " + event.getError());
+      },
+
+      onRecordUpdate : function(subscription, event) {
+        //Place each updated field into a map of all events.
+        //This will act as a cache of all the current values,
+        //not just the values updated in this event
+        for (field in event.getFields())
+        {
+          fields[field] = event.getFields()[field];
+        }
+        render();
+        streamlink.disconnect();
+      }
+    };
+
+    // Display the latest record values.
+    var fields = {};
+    function render() {
+       document.getElementById("recordLog").innerHTML = symbol + "\t" +
+        fields["BestBid"] + "\t" + fields["BestAsk"] + "\t" + fields["VolumeAcc"] + "\t" + fields["NetChange"] + "\t" + fields["Time"] + "\t" + fields["Last"];
+    }
+
+    // Subscribe to the record.
+    var symbol = "AAPL";
+    var subject = "/EXAMPLES/PRICING/TYPE1/" + symbol;
+    streamLink.subscribe(subject, subscriptionListener);
+
+    // Connect.
+    streamLink.connect();
+
+  </script>
+
+  </head>
+
+  <body>
+    <div class="container">
+    <!-- <div class="container" onunload="streamLink.disconnect();"> -->
+      <p id="recordLog" style="color:blue"></p>
+    </div>
+  </body>
+
+</html>

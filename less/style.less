@@ -2,20 +2,133 @@
 // --------------------------------------------------
 @import "./js/vendor/bootstrap/less/bootstrap.less";
 
-// Now add bootstrap overrides
-// --------------------------------------------------
-
 // Change the base font to Open Sans
+// --------------------------------------------------
 @font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
 
-// Brand colors
-// -------------------------
-@brand-primary:         #4baad3;  // changed
-@brand-success:         #5cb85c;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
-@brand-info:            #5bc0de;
-@white:                 #fff;     // added
+// Colors
+// --------------------------------------------------
+
+// Basic idea is that "objects" should not have intrinsic color
+// but that color should be added via a class.  However if an object
+// is *always* the same color then you can use the less mixins
+// ==============================================
+// Bad:
+// ==============================================
+// .jumbotron {
+//   padding: 30px;
+//   margin-bottom: 30px;
+//   color: #ffffff;            // should be @white
+//   background-color: #4baad3; // should be @blue
+// }
+//
+// <div class=jumbotron></div>  // no indication of colors - bad
+//
+// ===============================================
+// Good:
+// ===============================================
+// .jumbotron {
+//   padding: 30px;
+//   margin-bottom: 30px;
+//   // color: #ffffff;
+//   // background-color: #4baad3;
+// }
+//
+// .white {      color: @white; }
+// .bg-blue {    background-color: @blue; }
+//
+// <div class=jumbotron bg-blue white></div>  // obvious colors in markup
+//
+// ===============================================
+
+// Brand   https://kuler.adobe.com/create/color-wheel/
+@brand-primary: #4BAAD3;  // changed
+
+// Kuler Scheme
+@brand1:  #4BAAD3;  // Blue
+@brand2:  #2D677F;  // Teal
+@brand3:  #173340;  // Yellow
+@brand4:  #748E99;  // Orange
+@brand5:  #CC344C;  // Pink
+
+// Cool
+@aqua:    #7FDBFF;
+@blue:    #0074D9;
+@navy:    #001F3F;
+@teal:    #39CCCC;
+@green:   #2ECC40;
+@olive:   #3D9970;
+@lime:    #01FF70;
+
+// Warm
+@yellow:  #FFDC00;
+@orange:  #FF851B;
+@red:     #FF4136;
+@pink:    #FF748A;
+@fuchsia: #F012BE;
+@purple:  #B10DC9;
+@maroon:  #85144B;
+
+// Gray Scale
+@white:   #FFFFFF;
+@silver:  #DDDDDD;
+@gray:    #AAAAAA;
+@black:   #111111;
+
+// Brand
+.brand1 {       color: @brand1; }
+.brand2 {       color: @brand2; }
+.brand3 {       color: @brand3; }
+.brand4 {       color: @brand4; }
+.brand5 {       color: @brand5; }
+
+// Brand Backgrounds
+.bg-brand1 {    background-color: @brand1; }
+.bg-brand2 {    background-color: @brand2; }
+.bg-brand3 {    background-color: @brand3; }
+.bg-brand4 {    background-color: @brand4; }
+.bg-brand5 {   background-color: @brand5; }
+
+// Colors
+.pink {       color: @pink; }
+.navy {       color: @navy; }
+.blue {       color: @blue; }
+.aqua {       color: @aqua; }
+.teal {       color: @teal; }
+.olive {      color: @olive; }
+.green {      color: @green; }
+.lime {       color: @lime; }
+.yellow {     color: @yellow; }
+.orange {     color: @orange; }
+.red {        color: @red; }
+.fuchsia {    color: @fuchsia; }
+.purple {     color: @purple; }
+.maroon {     color: @maroon; }
+.white {      color: @white; }
+.silver {     color: @silver; }
+.gray {       color: @gray; }
+.black {      color: @black; }
+
+// Backgrounds
+.bg-navy {    background-color: @navy; }
+.bg-blue {    background-color: @blue; }
+.bg-aqua {    background-color: @aqua; }
+.bg-teal {    background-color: @teal; }
+.bg-olive {   background-color: @olive; }
+.bg-green {   background-color: @green; }
+.bg-lime {    background-color: @lime; }
+.bg-yellow {  background-color: @yellow; }
+.bg-orange {  background-color: @orange; }
+.bg-red {     background-color: @red; }
+.bg-pink {    background-color: @pink; }
+.bg-fuchsia { background-color: @fuchsia; }
+.bg-purple {  background-color: @purple; }
+.bg-maroon {  background-color: @maroon; }
+.bg-white {   background-color: @white; }
+.bg-gray {    background-color: @gray; }
+.bg-silver {  background-color: @silver; }
+.bg-black {   background-color: @black; }
+
 
 // Basics
 // --------------------------------------------------------
@@ -40,15 +153,53 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 300;
 }
 
+// Hubspot stuff
+.share-buttons {
+  zoom: 1;
+  max-width: 100%;
+  margin: 3em auto;
+  font-size: 2em;
+}
+.share-buttons:before,
+.share-buttons:after {
+  content: "";
+  display: table;
+}
+.share-buttons:after {
+  clear: both;
+}
+.share-buttons .share-button {
+  width: 100%;
+}
+.share-buttons .share-button iframe {
+  width: 100%;
+  height: 2.45em;
+}
+iframe {
+    overflow: hidden;
+    margin-bottom: 5px;
+    border: 0px;
+}
+iframe[seamless]{
+   overflow: hidden;
+}
+
+// How to do gradient color backgrounds
+.gradient-background {
+  background-image: -webkit-linear-gradient(left bottom, rgb(70, 38, 103), rgb(156, 117, 195));
+  background-image: -moz-linear-gradient(left bottom, rgb(70, 38, 103), rgb(156, 117, 195));
+  background-image: -o-linear-gradient(left bottom, rgb(70, 38, 103), rgb(156, 117, 195));
+  background-image: -ms-linear-gradient(left bottom, rgb(70, 38, 103), rgb(156, 117, 195));
+}
+
 
 // Search Header Drop
 // ================================================
 .header-container {
-height:70px;
-width:1000px;
-margin:0 auto 24px
+  height:70px;
+  width:1000px;
+  margin:0 auto 24px
 }
-
 .search-drop {
   background:#333;
   width:100%;
@@ -298,35 +449,140 @@ overflow:auto
 // --------------------------------------------------------
 
 // Main Background
-// @navbar-inverse-bg:                         @brand-primary;  //
-// @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-bg:                         @brand-primary;  //
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 15%);
 
 // Inverted navbar links
-// @navbar-inverse-link-color:                 @white;//@gray-dark; //
+@navbar-inverse-link-color:                 @gray-lighter; //@white;//@gray-dark; //
 
 // Hover
-// @navbar-inverse-link-hover-color:           #fff;
-// @navbar-inverse-link-hover-bg:              transparent;
+@navbar-inverse-link-hover-color:           @white;
+@navbar-inverse-link-hover-bg:              transparent;
 
 // Active
-// @navbar-inverse-link-active-color:          @white;//@navbar-inverse-link-hover-color;
-// @navbar-inverse-link-active-bg:             @brand-primary; //@white; //darken(@navbar-inverse-bg, 20%); // was 10
+@navbar-inverse-link-active-color:          @brand-primary; //@navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             @white; //@white; //darken(@navbar-inverse-bg, 20%); // was 10
 
 // Brand
-// @navbar-inverse-brand-color:                @navbar-inverse-link-color;
-// @navbar-inverse-brand-hover-color:          #fff;
-// @navbar-inverse-brand-hover-bg:             transparent;
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          @brand-primary; //white;
+@navbar-inverse-brand-hover-bg:             @white; //transparent;
 
 // Inverted navbar toggle
-// @navbar-inverse-toggle-hover-bg:            darken(@brand-primary, 15%);
-// @navbar-inverse-toggle-icon-bar-bg:         #fff;
-// @navbar-inverse-toggle-border-color:        @white; //darken(@brand-primary, 15%);
+@navbar-inverse-toggle-hover-bg:            @brand-primary;  //darken(@brand-primary, 15%);
+@navbar-inverse-toggle-icon-bar-bg:         @white;
+@navbar-inverse-toggle-border-color:        @white; //darken(@brand-primary, 15%);
 
 
-@navbar-inverse-brand-color:       darken(@brand-primary, 15%);
-@navbar-inverse-brand-hover-color: @white;
+@navbar-inverse-brand-color:       @white;  //darken(@brand-primary, 15%);
+@navbar-inverse-brand-hover-color: @brand-primary; //@white;
 @navbar-inverse-link-active-bg:    @brand-primary;
+
 // @navbar-inverse-bg:                rgba(0,0,0,0.8);
+
+
+
+
+
+// ===========================================================
+// Basics of a navbar
+@navbar-height:                          70px;
+@navbar-margin-bottom:                   @line-height-computed;
+@navbar-border-radius:                   @border-radius-base;
+@navbar-padding-horizontal:              floor((@grid-gutter-width / 2));
+@navbar-padding-vertical:                ((@navbar-height - @line-height-computed) / 2);
+
+@navbar-default-color:                   @white;          // Text
+@navbar-default-bg:                      @brand-primary;  // Background
+@navbar-default-border:                  darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-default-link-color:              rgba(255,255,255,.50);
+
+@navbar-default-link-hover-color:        rgba(255,255,255,.50); //@white; //@brand-primary;
+@navbar-default-link-hover-bg:           @brand-primary;//@white;
+
+@navbar-default-link-active-color:       @white; //darken(@brand-primary, 10%);
+@navbar-default-link-active-bg:          @brand-primary; //@gray; //darken(@brand-primary, 15%);
+
+@navbar-default-link-disabled-color:     #ccc;
+@navbar-default-link-disabled-bg:        transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:             @white; //@navbar-default-link-color;
+@navbar-default-brand-hover-color:       darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:          transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:         @brand-primary;;
+@navbar-default-toggle-icon-bar-bg:      @white;
+@navbar-default-toggle-border-color:     @white;
+// ============================================================
+
+// White Outline
+// .navbar-nav {
+//     > .active {
+//         // border-bottom: 4px solid transparent;
+//         // border-color: #fff;
+//         //border-radius: @border-radius-base;
+//       }
+//     }
+
+
+// .navbar-default .navbar-nav > .active > a,
+// .navbar-default .navbar-nav > .active > a:hover,
+// .navbar-default .navbar-nav > .active > a:focus {
+//   background: transparent;
+//   color: @white;
+//   border-bottom: 2px solid @white;
+//   height: 42px;
+// }
+
+.navbar-nav > li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.navbar-nav > li > a {
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.50);
+  border: 2px solid transparent;
+  height: 42px;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.50);
+}
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+
+
+
+// Puts a carat under the active navbar item
+// .navbar-nav .active:after {
+//   color: @white;
+//   position: absolute;
+//   bottom: 0;
+//   left: 50%;
+//   display: block;
+//   content: " ";
+//   width: 0;
+//   height: 0;
+//   margin-left: -5px;
+//   vertical-align: middle;
+//   border-right: 10px solid transparent;
+//   border-left: 10px solid transparent;
+//   border-bottom: 10px solid;
+// }
+
 .navbar {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -336,6 +592,16 @@ overflow:auto
 // remove the border
 .navbar-fixed-top {
   border-width: 0px;
+}
+
+.navbar-collapse {
+  // border-bottom: 1px solid transparent;
+  // box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+
+.navbar-toggle {
+  border: 2px solid transparent;
 }
 
 // Tweak the brand
@@ -356,7 +622,7 @@ overflow:auto
 // Jumbotron
 // --------------------------------------------------------
 @jumbotron-bg:                   @brand-primary;
-@jumbotron-heading-color:        #fff;
+@jumbotron-heading-color:        @white;
 .jumbotron {
   margin-bottom: 0px;
   h1 {
@@ -397,7 +663,7 @@ overflow:auto
 
 // Inverted outline button (white on dark)
 .btn-outline-inverse {
-  color: #fff;
+  color: @white;
   background-color: transparent;
   border-color: #cdbfe3;
 }
@@ -406,8 +672,8 @@ overflow:auto
 .btn-outline-inverse:active {
   color: #563d7c;
   text-shadow: none;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: @white;
+  border-color: @white;
 }
 
 
@@ -494,9 +760,6 @@ overflow:auto
   h3 {
     font-size: 34px;
     //font-family: "Lato", sans-serif;
-  }
-  i {
-    color: #16a085; //@brand-primary;
   }
   p {
     font-size: 18px;

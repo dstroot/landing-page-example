@@ -5828,6 +5828,12 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
 }
+.fill-bg {
+  background-image: url('MYURLHERE');
+  background-size: 'cover';
+  background-repeat: 'no-repeat';
+  background-position: 'center center';
+}
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -5874,7 +5880,7 @@ body {
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: rgba(255, 255, 255, 0.25);
+  border-bottom-color: rgba(255, 255, 255, 0.75);
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,

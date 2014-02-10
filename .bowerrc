@@ -1,1 +1,8 @@
-{ "directory" : "js/vendor" }
+{
+        "directory" : "js/vendor",
+        "storage" : {
+                "packages" : ".bower-cache",
+                "registry" : ".bower-registry"
+        },
+        "tmp" : ".bower-tmp"
+}

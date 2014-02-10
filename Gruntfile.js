@@ -62,7 +62,8 @@ module.exports = function(grunt) {
         },
         files: {
           'css/style.css': 'less/style.less',
-          'css/cover.css': 'less/cover.less'
+          'css/cover.css': 'less/cover.less',
+          'css/svg-draw.css': 'less/svg-draw.less'
         }
       },
       minify: {
@@ -72,7 +73,8 @@ module.exports = function(grunt) {
         },
         files: {
           'css/style.min.css': 'css/style.css',
-          'css/cover.min.css': 'css/cover.css'
+          'css/cover.min.css': 'css/cover.css',
+          'css/svg-draw.min.css': 'css/svg-draw.css'
         }
       }
     },
