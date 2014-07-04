@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     // Clean-up Task configuration.
     clean: {
-      dist: [ 'css/*' ]
+      dist: [ 'css/style.*.*' ]
     },
 
     // HTML Validation Task Configuration
@@ -14,11 +14,12 @@ module.exports = function(grunt) {
       options: {
         charset: 'utf-8',
         doctype: 'HTML5',
-        failHard: true,
+        failHard: false,
         reset: true,
         relaxerror: [
-          'Bad value X-UA-Compatible for attribute http-equiv on element meta.'
-          // 'Element img is missing required attribute src.'
+          'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
+          'Empty heading.',
+          'Bad value'
         ]
       },
       files: {
